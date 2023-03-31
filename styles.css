@@ -1,0 +1,30 @@
+#btn {
+    display: flex;
+    
+}
+
+#container {
+    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid black;
+  aspect-ratio: 1; /* Set the aspect ratio to 1 to make the container a square */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: calc(100% / attr(data-columns)); /* Set the maximum width of the columns to create a square grid */
+}
+
+.row {
+  flex: 1;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  background-color: lightgray; /* Default background color for all cells */
+}
