@@ -6,7 +6,7 @@
 #container {
     
   display: flex;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   justify-content: center;
   max-width: 600px;
   margin: 0 auto;
@@ -24,7 +24,7 @@
 .row {
   flex: 1;
   border: 1px solid black;
-  padding: 10px;
+  /*padding: 10px;*/
   text-align: center;
   background-color: lightgray; /* Default background color for all cells */
 }
