@@ -1,24 +1,38 @@
 //input from button
-
+window.onload=function(){
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click', () => {
+        let squares;
+        do { 
+            squares = prompt("Enter squares per side up to 100:");
+            squares = Number(squares);
+            if (squares > 100) {
+                alert("Please enter a number less than 100.")
+            }
+        } while (squares > 100);
+        console.log(squares);
+        squareGrid(squares);
+    })
+}
 
 //establishment of grid of divs for etch board
 
-
-const container = document.getElementById('container');
-let columns = 20;
-let rows = 20;
-for (let i = 0; i < columns; i++) {
-    let column = document.createElement('div');
-    column.className = 'column';
-    for (let j = 0; j < rows; j++) {
-        let row = document.createElement('div');
-        row.className = 'row';
-        column.appendChild(row);
-    }
-    container.appendChild(column);
+function squareGrid(squares) {
+    const container = document.getElementById('container');
+    let columns = squares;
+    let rows = squares;
+    for (let i = 0; i < columns; i++) {
+        let column = document.createElement('div');
+        column.className = 'column';
+        for (let j = 0; j < rows; j++) {
+            let row = document.createElement('div');
+            row.className = 'row';
+            column.appendChild(row);
+        }
+        container.appendChild(column);
 
 }
-
+}
 //hover on mouse-over
 const cells = document.querySelectorAll('.row');
 cells.forEach((cell) => {
