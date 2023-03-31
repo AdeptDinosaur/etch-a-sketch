@@ -27,4 +27,5 @@
   /*padding: 10px;*/
   text-align: center;
   background-color: lightgray; /* Default background color for all cells */
+  aspect-ratio: 1;
 }
