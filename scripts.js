@@ -28,16 +28,12 @@ function squareGrid(squares) {
             let row = document.createElement('div');
             row.className = 'row';
             column.appendChild(row);
+
+            row.addEventListener('mouseover', () => {
+                row.style.backgroundColor = 'black';
+            })
         }
         container.appendChild(column);
 
+    }
 }
-}
-//hover on mouse-over
-const cells = document.querySelectorAll('.row');
-cells.forEach((cell) => {
-    cell.addEventListener('mouseover', () => {
-        cell.style.backgroundColor = 'black';
-    });
-
-})
