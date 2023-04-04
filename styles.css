@@ -2,6 +2,9 @@
     display: flex;
     
 }
+button {
+  display: flex;
+}
 
 #container {
     

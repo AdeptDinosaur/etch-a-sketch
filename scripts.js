@@ -1,6 +1,12 @@
-//input from button
+function updateTextInput(val) {
+    document.getElementById('textInput').value=val;
+    let squares = val;
+    squareGrid(squares); 
+  }
+
+//input from button to be deprecated...
 window.onload=function(){
-    const btn = document.querySelector('.btn');
+    const btn = document.querySelector('#btn');
     btn.addEventListener('click', () => {
         let squares;
         do { 
