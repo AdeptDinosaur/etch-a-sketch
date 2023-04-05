@@ -1,8 +1,20 @@
-function updateTextInput(val) {
-    document.getElementById('textInput').value=val;
-    let squares = val;
-    squareGrid(squares); 
+squareGrid(64);
+
+function resetGrid() {
+    const container = document.querySelector('#container');
+    container.innerHTML = ''; // Remove the current grid
+  
+    const squares = document.getElementById('textInput').value;
+    console.log(squares);
+    squareGrid(squares); // Create a new grid with the updated value of squares
   }
+  
+  function updateTextInput(val) {
+    document.getElementById('textInput').value = val;
+    resetGrid(); // Call the resetGrid function to remove the current grid and create a new one with the updated value of squares
+  }
+
+
 
 //input from button to be deprecated...
 window.onload=function(){
