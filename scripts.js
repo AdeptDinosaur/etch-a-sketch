@@ -7,7 +7,8 @@ function resetGrid() {
     const squares = document.getElementById('textInput').value;
     console.log(squares);
     squareGrid(squares); // Create a new grid with the updated value of squares
-  }
+    
+    }
   
   function updateTextInput(val) {
     document.getElementById('textInput').value = val;
@@ -35,7 +36,7 @@ window.onload=function(){
 
 //establishment of grid of divs for etch board
 
-function squareGrid(squares) {
+function squareGrid(squares, color = 'black') {
     const container = document.getElementById('container');
     let columns = squares;
     let rows = squares;
@@ -46,12 +47,23 @@ function squareGrid(squares) {
             let row = document.createElement('div');
             row.className = 'row';
             column.appendChild(row);
-
+            
+            let rainbow = document.querySelector('#rainbow')
+            
             row.addEventListener('mouseover', () => {
-                row.style.backgroundColor = 'black';
+                rainbow.addEventListener('click', function(ev){
+                    if (ev.currentTarget.id == true){
+                        row.style.backgroundColor = 'red';
+                    }
+                })
+                row.style.backgroundColor = color;
             })
         }
         container.appendChild(column);
 
     }
 }
+const clear = document.getElementById('clear');
+clear.addEventListener('click', () => {
+    resetGrid();
+})
