@@ -7,7 +7,6 @@ function resetGrid() {
     container.innerHTML = ''; // Remove the current grid
   
     const squares = document.getElementById('textInput').value;
-    console.log(squares);
     squareGrid(squares); // Create a new grid with the updated value of squares
     
     }
