@@ -65,11 +65,14 @@ function squareGrid(squares) {
     }
 }
 
-
+function clearGrid() {
+    const rows = document.querySelectorAll('.row');
+    rows.forEach((row) => (row.style.backgroundColor = 'lightgray'));
+}
 
 
 
 const clear = document.getElementById('clear');
 clear.addEventListener('click', () => {
-    resetGrid();
+    clearGrid();
 })

@@ -1,13 +1,16 @@
 body {
-  display: flex;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: limegreen;
 }
-
+.content{
+  display: flex;
+}
 
 .settings {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
 }
 button {
   display: flex;
@@ -18,6 +21,8 @@ button {
 
 #textInput {
   text-align: center;
+  max-width: 64px;
+  
 }
 #colorPicker {
   margin-left: auto;
@@ -52,4 +57,12 @@ button {
   text-align: center;
   background-color: lightgray; /* Default background color for all cells */
   aspect-ratio: 1;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
 }
